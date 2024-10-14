@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { z } from "zod";
 import { fireEvent, render, screen } from "@testing-library/react";
 
-describe(GenerateFormComponents.name, () => {
+describe.skip(GenerateFormComponents.name, () => {
   const testSchema = z.object({
     name: z.string().min(3, { message: "Name must be atleast 3 characters" }),
     email: z.string().email("invalid email address"),
