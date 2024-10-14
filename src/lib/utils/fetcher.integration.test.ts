@@ -5,7 +5,7 @@ import { fetcher } from "./fetcher";
 //https://jsonplaceholder.typicode.com/ --> website used for api test
 
 // failing CI but passing at local. TODO: create a custom server instead
-describe.todo("integration fetcher", () => {
+describe.skip("integration fetcher", () => {
   const jsonPlaceHolderSchema = z.object({
     userId: z.number(),
     id: z.number(),
