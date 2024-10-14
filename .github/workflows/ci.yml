@@ -18,8 +18,16 @@ jobs:
         with:
           bun-version: 1.1.29
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
       - name: Install dependencies
         run: bun install --frozen-lockfile
+
+      - name: Install jsdom
+        run: bun add -d jsdom
 
       - name: Run format write
         run: bun run format
