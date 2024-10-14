@@ -14,14 +14,14 @@ describe("integration fetcher", () => {
 
   const sampleUrl = "https://jsonplaceholder.typicode.com/todos/1";
 
-  const resultData = {
-    userId: 1,
-    id: 1,
-    title: "delectus aut autem",
-    completed: false,
-  };
-
   it("should return a data base base on schema on success", async () => {
+    const resultData = {
+      userId: 1,
+      id: 1,
+      title: "delectus aut autem",
+      completed: false,
+    };
+
     const returnedData = await fetcher(sampleUrl, jsonPlaceHolderSchema);
 
     expect(returnedData.success).toBe(true);

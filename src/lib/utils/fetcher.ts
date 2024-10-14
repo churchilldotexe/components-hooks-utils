@@ -10,7 +10,7 @@ type FetcherReturnTypes<T extends ZodTypeAny> =
 export async function fetcher<T extends z.ZodTypeAny>(
   url: string | Request | URL,
   responseValidator: T,
-  init?: RequestInit
+  init?: RequestInit,
 ): Promise<FetcherReturnTypes<T>> {
   const response = await fetch(url, init)
     .then((res) => {
