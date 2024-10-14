@@ -1,0 +1,50 @@
+.errorMessage {
+  width: fit-content;
+  grid-area: 1/1;
+  justify-self: center;
+  align-self: center;
+  position: absolute;
+  background-image: linear-gradient(to bottom right,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0));
+  padding: 0.1em 0.5em;
+  border-radius: 5px;
+  z-index: 1;
+  box-shadow: 0 8px 6px 0 rgba(0, 0, 0, 0.37);
+  min-height: 0.5em;
+  backdrop-filter: blur(100px);
+  z-index: 1000;
+}
+
+
+.errorMessage.error {
+  color: #ef4444;
+}
+
+.errorMessage.warning {
+  color: #d97706;
+}
+
+.topMiddle {
+  bottom: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottomMiddle {
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.topLeft {
+  bottom: 90%;
+  justify-self: start;
+}
+
+
+.bottomLeft {
+  top: 90%;
+  justify-self: start;
+}
